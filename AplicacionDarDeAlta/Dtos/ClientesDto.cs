@@ -1,7 +1,7 @@
 ﻿namespace AplicacionDarDeAlta.Dtos
 {
     internal class ClientesDto
-     
+
     {
 
         //ATRIBUTOS (CARACTERISTICAS)
@@ -17,6 +17,8 @@
         string dniCliente = "aaaaa";
 
         long tlfCliente = 111111111;
+
+        int edadCliente = "9999";
 
         string fechaDeNacimiento = "9999/12/31";
 
@@ -42,6 +44,7 @@
 
         public string FecBajaCliente { get => fecBajaCliente; set => fecBajaCliente = value; }
         public long IdCliente { get => idCliente; set => idCliente = value; }
+        public int EdadCliente { get => edadCliente; set => edadCliente = value; }
 
 
         //Constructores (metodos que crean objetos -new)
@@ -53,6 +56,7 @@
             this.apellidosCLiente = apellidosCLiente;
             this.dniCliente = dniCliente;
             this.tlfCliente = tlfCliente;
+            this.edadCliente = edadCliente;
             this.fechaDeNacimiento = fechaDeNacimiento;
             this.fecAltaCliente = fecAltaCliente;
             this.fecBajaCliente = fecBajaCliente;
@@ -69,7 +73,7 @@
         public string ToString()
         {
             string clienteString = "nombre:" + this.nombreCliente + "apellidos: " +
-                this.apellidosCLiente + "DNI: " + this.dniCliente + "Tlf: " + this.tlfCliente + "Fecha de nacimiento: " +
+                this.apellidosCLiente + "DNI: " + this.dniCliente + "Tlf: " + this.fechaDeNacimiento + this.tlfCliente + "Fecha de nacimiento: " +
                  this.fechaDeNacimiento + "email: " + this.emailCliente + "fecha baja cliente: "
                  + this.fecBajaCliente + "id: " + this.idCliente;
 

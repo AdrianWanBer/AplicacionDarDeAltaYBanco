@@ -1,6 +1,5 @@
 ﻿using AplicacionDarDeAlta.Dtos;
 using AplicacionDarDeAlta.Sevicios;
-using System.Security.Cryptography;
 //using AplicacionDarDeAlta.Dtos;
 
 namespace AplicacionDarDeAlta
@@ -36,34 +35,39 @@ namespace AplicacionDarDeAlta
 
                 switch (seleccionUsuario)
                 {
-                    case 1: // Dar alta a nuevo cliente
-                        Console.WriteLine("---| Dando de alta |---");
-                        ci.darAltacliente(listaClientes);
-
+                    case 1: //Cerrar menu
+                        cerrarMenu = true;
                         break;
 
-                    case 2: //Ver lista de clientes
-                        foreach (ClientesDto recorrido in listaClientes)
-                        {
-                            Console.WriteLine(recorrido);
-                        }
+                    case 2: // Dar alta a nuevo cliente
+                        Console.WriteLine("---| Dando de alta |---");
+                        ci.darAltacliente(listaClientes); //Ver lista de clientes
                         break;
 
 
                     case 3: //Crear cuenta bancaria
                         Console.WriteLine("---| Creando cuenta de banco |---");
                         cb.asignarCuentaBancaria(ListaCuentasBancarias);
-                        foreach (CuentasBancariasDto recorrido in ListaCuentasBancarias)
+                        break;
+
+                    case 4: //Ver lista de clientes
+                        foreach (ClientesDto recorrido in listaClientes)
                         {
                             Console.WriteLine(recorrido);
                         }
                         break;
+                    case 5: //Editar clientes
+                       
 
                         break;
-                        
-                    case 4: //cerrar menu
-                        cerrarMenu = true;
+                    case 6: //Borrar clientes
+                        ci.borrarClientes(listaClientes);
                         break;
+
+                    case 7: //Ordenar Clientes
+                        ci.ordenarEdados(listaClientes);
+                        break;
+
 
                     default:
                         Console.WriteLine("No se ha seleccionado una opción valida");

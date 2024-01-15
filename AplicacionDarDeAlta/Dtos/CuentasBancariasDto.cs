@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AplicacionDarDeAlta.Dtos
+﻿namespace AplicacionDarDeAlta.Dtos
 {
     internal class CuentasBancariasDto
     {
@@ -37,15 +31,15 @@ namespace AplicacionDarDeAlta.Dtos
             this.fchAlta = fchAlta;
             this.idClienteDeLaCuenta = idClienteDeLaCuenta;
         }
-        public CuentasBancariasDto() 
-        { 
+        public CuentasBancariasDto()
+        {
         }
 
         override
         public string ToString()
         {
             string stringBanco = "id cuenta del banco: " + this.idCuentaBancaria + "isBan de la cuenta: " +
-                this.isBan + "Switch de la entidad bancaria: " 
+                this.isBan + "Switch de la entidad bancaria: "
                 + this.switchEntidadBancaria + "fecha Baja: " + this.fchBaja + "fecha de alta: " + this.fchAlta +
                 "Propietario: " + this.idClienteDeLaCuenta;
 
